@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="{{ url_for('static', filename='css/main.css') }}"
+      rel="stylesheet"
+    />
+
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+    <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+
+    <title>AI Demo</title>
+
+    <div class="navbar">
+      <a href="/">Home</a>
+      <div class="subnav">
+        <button class="subnavbtn">
+          AI Demos <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="subnav-content">
+          <a href="imageclassification">Classify an image</a>
+          <a href="videoclassification">Classify a live video</a>
+          <a href="movementclassification">Classify video movements</a>
+        </div>
+      </div>
+      <div class="subnav">
+        <button class="subnavbtn">
+          Follow me <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="subnav-content">
+          <a class="facebook" href="https://www.facebook.com"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a class="instagram" href="http://instagram.com"
+            ><i class="fa fa-instagram"></i
+          ></a>
+          <a class="github" href="https://www.github.com"
+            ><i class="fa fa-github"></i
+          ></a>
+          <a class="linkedin" href="https://www.linkedin.com"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+      <a href="contact">Contact</a>
+    </div>
+  </head>
+
+  <body>
+    <div class="w3-container">
+      <h2>Home Page</h2>
+      <h4>Choose a classfication demo</h4>
+
+      <button
+        onclick="window.location.href = 'imageclassification';"
+        id="class-a"
+        class="class-a"
+      >
+        Image Classification
+      </button>
+      <button
+        onclick="window.location.href = 'videoclassification';"
+        id="class-b"
+        class="class-b"
+      >
+        Video Classification
+      </button>
+      <button
+        onclick="window.location.href = 'movementclassification';"
+        id="class-c"
+        class="class-c"
+      >
+        Movement Classification
+      </button>
+
+      <script
+        src="{{ url_for('static', filename='js/main.js') }}"
+        type="text/javascript"
+      ></script>
+    </div>
+
+    <div class="footer">
+      <div class="w3-container w3-responsive">
+        <h4>Contact</h4>
+        <p>ShopBee</p>
+        <p>+84 935402490</p>
+        <p>huytran161201@gmail.com</p>
+      </div>
+    </div>
+  </body>
+</html>
